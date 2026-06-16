@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+
+    function getStudent(){
+        return new Promise(function(resolve){
+
+            setTimeout (function(){
+                resolve("arun");
+
+
+            },3000);
+
+        });
+    }
+
+
+    async function displayStudent(){
+
+        console.log("loading student ...");
+
+        let student = await getStudent();
+
+        console.log(student);
+    }
+
+    displayStudent();
+
+
+</script>
